@@ -8,8 +8,8 @@ fetch.and.preprocess <- function(urls.to.fetch) {
         {
             flog.info("reading %s", urls.to.fetch[i])
             # if(file.exists(urls.to.fetch[i])) { read the file as a gct file
-            data <- read.table(urls.to.fetch[i], skip = 2, head = T, row.names = 1, 
-                check.names = F, quote = NULL)
+            data <- read.table(urls.to.fetch[i], skip = 0, head = T, row.names = 1, 
+                check.names = F)
             # load(urls.to.fetch[i]); } else { load(url(urls.to.fetch[i])); }
             gct <- as.data.frame(data)
             flog.info("done reading")

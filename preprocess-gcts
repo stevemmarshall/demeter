@@ -31,7 +31,7 @@ batch.per.sample <- setNames(batch.per.sample[["DEMETER batch"]],
 	batch.per.sample[["Name"]])
 
 fc.matrices <- lapply(fc.mat.filenames, function(x) { 
-    df <- read.table(x, as.is=T, header=T, skip=2, row.names=1, quote='', comment='', check.names=F)
+    df <- read.table(x, as.is=T, header=T, skip=0, row.names=1)
     m <- as.matrix(df[,c(-1)])
     colnames(m) <- colnames(df[,-1])
     rownames(m) <- rownames(df)
