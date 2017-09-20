@@ -298,7 +298,7 @@ exportSolutions <- function(m, output.path = "./") {
     write.csv(signif(m$S, 4), file = out.file, quote = F)
 }
 
-generateHairpinReports <- function(m, output.path = "./", num.cores = 2, write.pdfs = T) {
+generateHairpinReports <- function(m, output.path = "./", num.cores = 2, write.pdfs = F) {
     gdf <- generateHairpinReport(m, num.cores = num.cores)
     out.file <- file.path(output.path, "shRNA.explained.csv")
     write.csv(gdf, file = out.file, quote = F, row.names = T)

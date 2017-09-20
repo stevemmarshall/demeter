@@ -8,7 +8,6 @@ library(caret)
 source("pre_fit.R")
 source("k_fold.R")
 source("demeter.R")
-
 invisible(flog.threshold(DEBUG))
 
 parser <- arg_parser("Consumes multiple GCT files with shRNA fold-change data and performs preprocessing to generate the datastructure that DEMETER uses as input.")
