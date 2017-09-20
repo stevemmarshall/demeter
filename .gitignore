@@ -1,0 +1,6 @@
+*.Rdata
+*.Rout
+*.Rapp.history
+final/
+test/
+hpsearch/
